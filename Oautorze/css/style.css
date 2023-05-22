@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+    /* standardowe resetowanie*/
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    /* ustawienie  wielkoci rema  na 10 px*/
+}
+
+body {
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+
+}
+
+.hero-shadow {
+    /* cień do nałożenia na dany element na ego całą powierzchnię */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    z-index: -1;
+}
+
+.additional-text {
+    /* text dodany*/
+    font-size: 2rem;
+}
+
+
+.top-hero {
+    /* obraz u góry podstrony - każda grafika na podstronach na takie same lub bardzo podobne style*/
+    position: relative;
+    margin-top: 10px;
+    height: 20rem;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.top-hero-text {
+    /* poniżej style  dla tej klasy do podstron które mozna by tez zrobic w html w bootstrapie */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+
+}
+
+/* -------------- */
+/*    nawigacja   */
+/* -------------- */
+nav {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+.navbar-toggler {
+    font-size: 2rem;
+    /* powiekszenie toglera na małym ekranie */
+}
+
+.navbar-brand {
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-transform: none;
+    /* to w samym nav brandzie  - aby z nav nie był utrzymany uppercase ale zeby były zwykłe litery jak na naszym wzorcu logo !!!!!!!  */
+}
+
+.iconA {
+    font-size: xx-large;
+
+}
+
+/* -------------- */
+/*     header     */
+/* -------------- */
+
+header {
+    margin-top: 2px;
+    padding-top: 6.3rem;
+    font-size: 2rem;
+}
+
+.carousel-item {
+    /* to jest rodzic na zdjęcie tj. hero-img  dlatego dajemy position: relative, backgroun-position na center aby zdjęcie było wycentrowane i backgroune-size na cover aby zdjęcie całe wypełnaiło rodzoca i index na "0" a wysokośc ustawiamy na 400px*/
+    position: relative;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.carousel-img-one {
+    /* to podamy do poszczególnych karuzel zdjęcia jako background-image: !!!!!! */
+    background-image: url('../img/main-carousel-1.jpg');
+}
+
+.carousel-img-two {
+    background-image: url('../img/main-carousel-2.jpg');
+}
+
+.carousel-img-three {
+    background-image: url('../img/main-carousel-3.jpg');
+}
+
+.carousel-img-four {
+    background-image: url('../img/main-carousel-4.jpg');
+}
+
+.carousel-img-five {
+    background-image: url('../img/main-carousel-5.jpg');
+}
+
+.carousel-img-six {
+    background-image: url('../img/main-carousel-6.jpg');
+}
+
+
+/* -------------- */
+/*      home      */
+/* -------------- */
+
+
+.btn-link {
+    /* powiększenie wielkości  liter w akordeonie  */
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.home-boxes {
+    padding-top: 2.5em;
+    /* cała sekcja dostała padding 5 tem od góry i od dołu i dlatego urosła */
+    padding-bottom: 5em;
+}
+
+.home-box i {
+    /* tupowiekszono  w "i"  umieszczone ikony */
+    font-size: 4rem;
+}
+
+.home-box h3 {
+    font-size: 2.6rem;
+    /* a tu w h3 powiekszono litery */
+}
+
+/* ---poniżej  kod dot grafiki z home-passion----------- */
+
+.home-passion {
+    position: relative;
+    /* aby cień dotyczył tylko tego elementu w któym jest zakotwiczony */
+    height: 350px;
+    /* wysokość  zdjęcia dla tego diva */
+    background-image: url('../img/home-passion.jpg');
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+}
+
+/* -------------- */
+.home-brand h3 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.home-brand .display-1 {
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+/* -------------- */
+
+
+
+
+
+/* -------------- */
+/*     footer     */
+/* -------------- */
+footer {
+    font-size: 2rem;
+    height: 95px;
+}
+
+
+@media (min-width:992px) {
+
+    /* tu ustawiamy breakpoint na 992px i zdejmujemy padding w container aby zdjecie przykleiło się do góry, nastepnie odwołujemy sie do kalsu aboutus-shadow i ustawiamy mu cień do środka przez inset !!!!!!!!!   */
+    .aboutus-info .container {
+        padding: 0;
+    }
+
+    .aboutus-shadow {
+        box-shadow: inset 0 5px 10px -5px rgba(0, 0, 0, .8);
+    }
+
+    .aboutus-text {
+        padding: 5em 0;
+        /* na tekście padding tylko od góry i dołu  a boczny na "0" */
+        transform: skew(-15deg);
+        /* obrót - skos w prawo !!!!!!!!!!!!!!!!!!!!!!*/
+    }
+
+    .aboutus-text-left {
+        padding-right: 2em;
+        text-align: right;
+        /* wyrównanie textu  z lewej strony  do prawej !!!!!!!!*/
+    }
+
+    .aboutus-text-right {
+        padding-left: 2em;
+        text-align: left;
+        /* wyrównanie  prawego tekstu  do lewj !!!!!!!!!!!*/
+    }
+
+    .aboutus-img {
+        height: auto;
+        /* wysokość na auto aby była automatycznie obliczana i zajęła całą dostępną  przestrzeń w pionie!!!!!!!!!!!!!!!!!*/
+        transform: skew(-15deg);
+        /* ten sam skos na grafice  !!!!!!!!!!!!!!*/
+    }
+}
+
+@media (min-width:1400px) {
+
+    /* tu podmieniamy zdjęcia  w karuzeli na lepszej rozdzielczości  w  zaleznosci od wymiaru ekranu oraz wskazujemy wysokość  karuzeli na 600px w rozmiarze powyżej 1400px. */
+    .carousel-item {
+        height: 600px;
+    }
+
+    .carousel-img-one {
+        background-image: url('../img/main-carousel-1-hq.jpg');
+    }
+
+    .carousel-img-two {
+        background-image: url('../img/main-carousel-2-hq.jpg');
+    }
+
+    .carousel-img-three {
+        background-image: url('../img/main-carousel-3-hq.jpg');
+    }
+
+
+    .carousel-img-four {
+        background-image: url('../img/main-carousel-4-hq.jpg');
+    }
+
+    .carousel-img-five {
+        background-image: url('../img/main-carousel-5-hq.jpg');
+    }
+
+    .carousel-img-six {
+        background-image: url('../img/main-carousel-6-hq.jpg');
+    }
+
+
+
+
+
+
+
+
+
+}
